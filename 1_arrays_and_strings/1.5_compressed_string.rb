@@ -3,9 +3,9 @@ def compress_string(str)
 
   # start by sticking in the first character and starting the counter
   prev_char = str[0]
-  arr << prev_char
+  arr << str[0]
   temp_count = 1
-  
+
   (1..(str.length - 1)).each do |i|
     if !(prev_char == str[i])
       arr << temp_count
