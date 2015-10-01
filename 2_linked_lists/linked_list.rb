@@ -28,9 +28,9 @@ class LinkedList
 	end
 
 	def remove_node(index)
-		precursor = nil
-		(index - 1).times do
-			precursor = self.head.next
+		precursor = self.head  # this is temporary
+		(index - 2).times do
+			precursor = precursor.next
 		end
 		node_to_remove = precursor.next
 		successor = node_to_remove.next
@@ -40,6 +40,17 @@ class LinkedList
 		node_to_remove.next = nil
 		return node_to_remove
 	end
-	
+
+	def insert_node(node, index)
+		new_precursor = self.head
+		index.times do
+			new_precursor = new_precursor.next
+		end
+		new_successor = new_precursor.next
+		new_precursor.next = node
+		node.next = new_successor
+		return node
+	end
+
 end
 
