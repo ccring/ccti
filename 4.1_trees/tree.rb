@@ -1,14 +1,14 @@
-# http://stackoverflow.com/questions/7196430/implementing-tree-with-ruby
+# inspired by:  http://stackoverflow.com/questions/7196430/implementing-tree-with-ruby
 
-require 'pry'
 
-class Tree
+class Node
   attr_accessor :children, :value
 
-  def initialize(v)
+  def initialize(v, *children)
     @value = v
-    @children = []
+    @children = children
   end
 end
 
-binding.pry
+# require 'pry'
+# binding.pry
