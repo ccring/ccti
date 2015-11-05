@@ -1,5 +1,3 @@
-require_relative 'example_tree'
-
 class Node
 
 	def preorder_traversal
@@ -11,6 +9,7 @@ class Node
 
 end
 
+require_relative 'example_tree'
 @root.preorder_traversal
 puts
 
