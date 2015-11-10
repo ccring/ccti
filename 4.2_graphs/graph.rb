@@ -4,7 +4,7 @@
 
 class Node
 
-  attr_reader :name
+  attr_reader :name, :successors
 
   def initialize(name)
     @name = name
@@ -24,8 +24,10 @@ end
 
 class Graph
 
-  def initialize
-    @nodes = {}
+  attr_reader :nodes
+
+  def initialize(nodes = {})
+    @nodes = nodes
   end
 
   def add_node(node)
@@ -38,6 +40,12 @@ class Graph
 
   def [](name)
     @nodes[name]
+  end
+
+  def display
+    nodes.map do |name, node|
+      node.to_s
+    end
   end
 
 end
