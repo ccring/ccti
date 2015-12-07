@@ -12,19 +12,9 @@ def permutation?(string1, string2)
 		return false if hash2[char] > hash1[char]
 	end
 
-	print "hash1: "
-	print hash1
-	print "hash2: "
-	print hash2
-	puts
-
 	hash1 == hash2
 end
 
 p permutation?("abcb","bbac") == true
-# p permutation?("abcb","bbac")
-
 p permutation?("abcb","bbacc") == false
-# p permutation?("abcb","bbacc")
 p permutation?("abcb","bba") == false
-# p permutation?("abcb","bba")
