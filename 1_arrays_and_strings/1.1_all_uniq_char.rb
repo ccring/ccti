@@ -1,8 +1,8 @@
 def all_uniq?(str)
 	tally = {}
-	(0..(str.length - 1)).each do |char|
-		if !tally[str[char]]
-			tally[str[char]] = "yup"
+	(0..(str.length - 1)).each do |idx|
+		if !tally[str[idx]]
+			tally[str[idx]] = "yup"
 		else
 			return false
 		end
